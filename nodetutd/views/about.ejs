@@ -1,0 +1,81 @@
+<html><head>
+    <style>
+      @media only screen and (max-width: 320px) {
+      
+        #bigg-cont{
+          zoom:60%;
+        }
+    }
+    #bigg-cont{
+      zoom: 60%;
+    }
+    .cardd {
+        text-align: center;
+        margin:10px;
+        position: inherit;
+        border: 1px black;
+        background-color: whitesmoke;
+      }
+      .cardd :hover{
+        transition: 0.3s;
+      }
+      .price {
+        color: grey;
+      }
+      
+      .cardd button {
+        border: none;
+        outline: 0;
+        padding: 7px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        pointer-events: none;
+        cursor: pointer;
+       
+      }
+      
+      .cardd button:hover {
+        opacity: 0.7;
+      }
+      #bigg-cont{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      img :hover{
+        animation: zoom-in-zoom-out 1s ease infinite;
+      }
+    
+    </style>
+</head>
+
+<div id="bigg-cont">
+    <div class="cardd">
+        <img src= "http://localhost:8080/public/woman-architect-holding-laptop-analyze-building-model-architectural-office-engineer-working-with-computer-maquette-design-construction-structure-urban-project.jpg" alt="" width="150px"height='100px'>
+        <p>Interior Design</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Book</button></p>
+      </div>
+
+      <div class="cardd">
+        <div id="noimg"><img src="http://localhost:8080/public/Last%20Chance%20to%20Shop%20Our%20Holiday%20Sale!.jpeg" alt="" width="140px"heigh='170px'>
+         </div>
+        <p>Electronics Shop</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Book</button></p>
+      </div>
+
+      <div class="cardd">
+        <img src="http://localhost:8080/public/Premium%20Photo%20_%20Electrical%20engineer%20using%20digital%20meter%20to%20checking%20electric%20current%20voltage%20at%20circuit%20breaker_.jpeg" alt="" width="150px"heigh='170px'>
+        <p>Electrical Design</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Book</button></p>
+      </div>
+      
+    </div>
+</html>

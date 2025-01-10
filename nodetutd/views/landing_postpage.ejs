@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <%- include('header'); %>
+
+        <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+            #ost-body{
+                position: absolute;
+                background-color: whitesmoke;
+                margin-bottom: 50%;
+            }
+            #img{
+                background: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / 0));
+            }
+            #title{
+                text-align: center;
+                font-family:'Times New Roman', Times, serif;
+                font-weight: 500;
+            }
+            #title-body{
+                font-family:'Montserrat', sans-serif;
+            }
+            #author{
+               margin: auto;
+               width: 50%;
+               border-radius: 100%;
+            }
+            #authorname{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <%  const keys = Object.keys(blogs); %>
+   <% for (let key of keys) { %>
+    <div hidden>
+<% const src = blogs[key].photo %>
+<% const src1 = blogs[key].author %>
+</div>
+<div id="title-body">
+   <div id="author">  
+    <% if (src !== "") { %>
+  
+    <img src="<%= src1 %>" >
+      <% } %></div>
+   <div id="authorname"><%= blogs[key].authorname %></div>
+<div id="title"><%= blogs[key].title %></div> 
+</br></br>
+<%= blogs[key].createdAt %>
+</div>
+</br></br></br>
+<!--This is the main body where all write-ups-->
+<div id="post-body">
+    <%= blogs[key].body %>
+
+    <% if (src !== "") { %>
+  
+      <img src="<%= src %>" >
+        <% } %>
+        
+</div>
+<% }%>
+<div id="forwards&follow"></div>
+
+
+
+<div>
+    <%- include('footer'); %>
+</div>
+</html>
